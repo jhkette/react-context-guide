@@ -4,6 +4,7 @@ import BookList from "./components/Booklist";
 import ThemeContextProvider from "./contexts/ThemeContext";
 import AuthContextProvider from "./contexts/AuthContext";
 import ThemeToggle from "./components/ThemeToggle";
+import BookContextProvider from './contexts/BookContext';
 
 
 // you wrap the app components in the context providers. They are imported above.
@@ -14,7 +15,9 @@ function App() {
       <ThemeContextProvider>
         <AuthContextProvider>
           <Navbar />
+          <BookContextProvider>
           <BookList />
+          </BookContextProvider>
           <ThemeToggle />
         </AuthContextProvider>
       </ThemeContextProvider>
